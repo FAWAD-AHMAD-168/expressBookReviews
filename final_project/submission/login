@@ -1,0 +1,17 @@
+
+$ curl -i -c cookies.txt -X POST http://localhost:5000/customer/login \
+-H "Content-Type: application/json" \
+-d '{"username":"student1","password":"password123"}'
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 41
+ETag: W/"29-ldhdojv0pqKaca4wRCr3sxVmVfs"
+Set-Cookie: connect.sid=s%3A6UJMHJ9x45q7NNxFezeQPUne6WPGlyLl.Z4E4TdUplg4pAg1wH90m29S0rdRLaYewMzej0ciaTkU; Path=/; HttpOnly
+Date: Wed, 11 Nov 2026 18:01:49 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"User successfully logged in"}
+
