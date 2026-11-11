@@ -12,14 +12,14 @@ public_users.post("/register", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
-    // Check if username and password are provided
+    // Check whether username and password are provided
     if (!username || !password) {
         return res.status(400).json({
             message: "Username and password are required"
         });
     }
 
-    // Check if username already exists
+    // Check whether username already exists
     const userExists = users.some(
         user => user.username.toLowerCase() === username.trim().toLowerCase()
     );
